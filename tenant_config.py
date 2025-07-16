@@ -127,25 +127,7 @@ class TenantConfigManager:
             ],
             input_tables=[
                 # Input tables (70003 series) - these are for financial-data endpoint
-                TableConfig(
-                    sheet_type='balance_sheet',  # Full name for PostgreSQL function
-                    sheet_name='Balance Sheet',
-                    sheet_id='balance_sheet',
-                    meta_table='70003_Input_balance_sheet_Meta',
-                    data_table='70003_Input_balance_sheet_Data',
-                    app_code='70003',
-                    is_active=True
-                ),
-                TableConfig(
-                    sheet_type='income_statement',  # Full name for PostgreSQL function
-                    sheet_name='Income Statement',
-                    sheet_id='income_statement',
-                    meta_table='70003_Input_income_statement_Meta',
-                    data_table='70003_Input_income_statement_Data',
-                    app_code='70003',
-                    is_active=True
-                ),
-                TableConfig(
+                                TableConfig(
                     sheet_type='Broker',  # Matches PostgreSQL function expectation
                     sheet_name='Broker Mix %',
                     sheet_id='broker_mix_testing',
@@ -180,7 +162,25 @@ class TenantConfigManager:
                     data_table='70003_Input_Growth_Data',
                     app_code='70003',
                     is_active=True
-                )
+                ),
+                TableConfig(
+                    sheet_type='balance_sheet',  # Full name for PostgreSQL function
+                    sheet_name='Balance Sheet',
+                    sheet_id='balance_sheet',
+                    meta_table='70003_Input_balance_sheet_Meta',
+                    data_table='70003_Input_balance_sheet_Data',
+                    app_code='70003',
+                    is_active=True
+                ),
+                TableConfig(
+                    sheet_type='income_statement',  # Full name for PostgreSQL function
+                    sheet_name='Income Statement',
+                    sheet_id='income_statement',
+                    meta_table='70003_Input_income_statement_Meta',
+                    data_table='70003_Input_income_statement_Data',
+                    app_code='70003',
+                    is_active=True
+                ),
             ],
             features=['multi_tenant', 'caching', 'validation'],
             cache_timeout=3600,
