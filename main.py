@@ -263,7 +263,7 @@ app = FastAPI(
 # Add CORS middleware for frontend integration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "https://www.vector-portal.com"],
+    allow_origins=["http://localhost:3000", "http://localhost:3001", "https://www.vector-portal.com", "https://new-vectormla-platform-frontend-vector-ml-analytics-team.vercel.app/"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
